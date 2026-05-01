@@ -1,0 +1,29 @@
+name: LifeScore AI Deployment
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build Assets
+        run: npm run build
+
+      - name: Deploy to Cloud
+        run: |
+          echo "Deploying to AWS/IBM Cloud..."
+          # Example deployment commands for AWS Elastic Beanstalk or Cloud Run
+          # gcloud run deploy lifescore-ai --source .

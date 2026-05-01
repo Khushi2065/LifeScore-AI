@@ -1,0 +1,6 @@
+{
+  "name": "LifeScore AI",
+  "description": "A cloud-native personal analytics dashboard that calculates your 'Life Score' based on expenses, fitness, and study habits using AI-driven insights.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["AI Analytics", "Personal Dashboard", "Health & Finance Tracking"]
+}
