@@ -56,7 +56,7 @@ npm run dev
 | `/api/data/study` | GET/POST | Manage study history |
 | `/api/ai/chat` | POST | Chat with the AI Advisor |
 
-## ☁️ Deployment (AWS / IBM)
+## Deployment (AWS / IBM)
 
 ### AWS Deployment
 1. **Frontend**: Build using `npm run build` and upload `dist/` to **S3**. Enable static website hosting and use **CloudFront** for HTTPS.
