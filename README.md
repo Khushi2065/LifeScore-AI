@@ -1,23 +1,23 @@
-# LifeScore AI 🧠
+# LifeScore AI 
 
 LifeScore AI is a personal analytics dashboard that tracks your habits and calculates a "Life Score" based on consistency and balance.
 
-## 🚀 Features
+##  Features
 - **Dashboard**: High-level metrics for Study, Fitness, and Finances.
 - **Life Score Engine**: Custom formula (40% Study, 30% Fitness, 30% Discipline).
 - **AI Advisor**: Chatbot providing personalized growth tips using Gemini/Watson.
 - **Cloud-Native**: Ready for deployment on AWS S3/EC2 or IBM Cloud.
 
-## ⚙️ Tech Stack
+##  Tech Stack
 - **Frontend**: React 19, Vite, Tailwind CSS, Recharts, Framer Motion.
 - **Backend**: Node.js, Express.
 - **Database**: MongoDB Atlas.
 - **Auth**: JWT with bcrypt password hashing.
 
-## 🛠️ Setup Instructions
+##  Setup Instructions
 
 ### 1. Database Setup
-Create a cluster on [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) and get your connection string.
+Create a cluster on IBM Cloudant and get your connection string.
 
 ### 2. Environment Variables
 Create a `.env` file in the root based on `.env.example`:
@@ -56,7 +56,7 @@ npm run dev
 1. Use **IBM Cloud Code Engine** to deploy the full-stack container.
 2. Connect to **IBM Cloud Object Storage** if file uploads are added.
 
-## 🤖 Watson Assistant Integration
+##  Watson Assistant Integration
 To use IBM Watson instead of Gemini:
 1. Create a Watson Assistant instance on IBM Cloud.
 2. Update `/server/ai.ts` to use `ibm-watson` SDK.
