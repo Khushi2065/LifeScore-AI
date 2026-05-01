@@ -22,9 +22,20 @@ Create a cluster on IBM Cloudant and get your connection string.
 ### 2. Environment Variables
 Create a `.env` file in the root based on `.env.example`:
 ```env
-MONGODB_URI="your_mongodb_atlas_uri"
-JWT_SECRET="secure_random_string"
-GEMINI_API_KEY="your_google_ai_studio_key"
+# Authentication
+# JWT_SECRET: A secret string used to sign security tokens.
+JWT_SECRET="generate_a_random_string_here"
+
+# IBM Cloudant Credentials (REQUIRED for data storage)
+CLOUDANT_URL="https://apikey-v2-2wrxaodfeohc4si2tu9aengh2p3z7c54kezc166unttl:b5dbbaa9553c44dc65d3a5d60cd4e3bc@cd67a297-0846-421a-920f-4d656ed58c5a-bluemix.cloudantnosqldb.appdomain.cloud"
+CLOUDANT_APIKEY="IFHOg7B6gLOPZ3u09tR0dFKDvvLD7rfTyt5ZPxcu1c4f"
+# Gemini API Key (Injected by platform)
+VITE_GEMINI_API_KEY="AIzaSyBtEA-4BwNXUZUsP-oS8lMGRaqI5jLINCc"
+
+WATSONX_ASSISTANT_APIKEY=936wZ18aJVsMBpdW5H0tOvQx7cOE989OQTADxuTNWKz3
+WATSONX_ASSISTANT_URL=https://api.au-syd.assistant.watson.cloud.ibm.com/instances/4afaa225-b0c5-49dd-9c77-26891c6a3fc8
+WATSONX_ASSISTANT_ID=2655a0c5-2405-4c4e-853b-a86e5135b22e
+WATSONX_ASSISTANT_ENVIRONMENT_ID=cd0eb83e-e66c-4031-88ce-fa86f8285eae
 ```
 
 ### 3. Installation
@@ -33,7 +44,7 @@ npm install
 npm run dev
 ```
 
-## 📖 API Documentation
+##  API Documentation
 
 | Endpoint | Method | Description |
 |----------|--------|-------------|
