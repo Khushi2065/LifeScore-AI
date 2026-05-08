@@ -1,13 +1,14 @@
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
+import process from 'process';
 import { defineConfig, loadEnv } from 'vite';
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
 
   return {
-    root: process.cwd(), // 🔥 CHANGE THIS LINE (VERY IMPORTANT)
+    root: '.', // ✅ FORCE correct root
 
     plugins: [react(), tailwindcss()],
 
@@ -17,7 +18,7 @@ export default defineConfig(({ mode }) => {
 
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, 'src'),
+        '@': path.resolve(process.cwd(), 'src'),
       },
     },
 
