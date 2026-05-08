@@ -63,6 +63,7 @@ async function startServer() {
 
   app.listen(PORT, "0.0.0.0", () => {
     console.log(`Server running on port ${PORT}`);
+    console.log(`Frontend accessible at http://localhost:${PORT}/`);
   });
 }
 

@@ -8,12 +8,14 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
 
   return {
-    root: '.', // ✅ FORCE correct root
+    root: '.',
 
     plugins: [react(), tailwindcss()],
 
     define: {
-      'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
+      'process.env.GEMINI_API_KEY': JSON.stringify(
+        env.VITE_GEMINI_API_KEY
+      ),
     },
 
     resolve: {
@@ -28,7 +30,17 @@ export default defineConfig(({ mode }) => {
     },
 
     server: {
+      port: 5173,
+
       hmr: process.env.DISABLE_HMR !== 'true',
+
+      proxy: {
+        '/api': {
+          target: 'http://localhost:3000',
+          changeOrigin: true,
+          secure: false,
+        },
+      },
     },
   };
 });
